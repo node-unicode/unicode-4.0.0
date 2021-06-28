@@ -1,1 +1,1 @@
-module.exports=['!','?','\u1944','\u1945','\u2762','\u2763','\uFE56','\uFE57','\uFF01','\uFF1F']
+module.exports=require('./ranges.js').flatMap(r=>Array.from(r.values()))
