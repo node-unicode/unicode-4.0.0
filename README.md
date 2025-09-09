@@ -716,6 +716,10 @@ require('@unicode/unicode-4.0.0/Script/UGARITIC/code-points.js');
 require('@unicode/unicode-4.0.0/Script/UGARITIC/symbols.js');
 require('@unicode/unicode-4.0.0/Script/UGARITIC/regex.js');
 
+require('@unicode/unicode-4.0.0/Script/Unknown/code-points.js');
+require('@unicode/unicode-4.0.0/Script/Unknown/symbols.js');
+require('@unicode/unicode-4.0.0/Script/Unknown/regex.js');
+
 require('@unicode/unicode-4.0.0/Script/YI/code-points.js');
 require('@unicode/unicode-4.0.0/Script/YI/symbols.js');
 require('@unicode/unicode-4.0.0/Script/YI/regex.js');
