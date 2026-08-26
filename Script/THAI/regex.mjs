@@ -1,0 +1,1 @@
+export default /[\u0E01-\u0E3A\u0E40-\u0E4E\u0E50-\u0E59]/;

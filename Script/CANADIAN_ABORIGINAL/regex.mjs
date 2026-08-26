@@ -1,0 +1,1 @@
+export default /[\u1401-\u166C\u166F-\u1676]/;

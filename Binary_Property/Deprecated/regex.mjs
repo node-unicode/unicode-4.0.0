@@ -1,0 +1,1 @@
+export default /[\u0340\u0341\u17A3\u17D3\u206A-\u206F]/;
