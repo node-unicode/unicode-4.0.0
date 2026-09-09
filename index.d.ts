@@ -5,6 +5,7 @@ export const Script: string[];
 export const Case_Folding: string[];
 export const Block: string[];
 export const Line_Break: string[];
+export const Joining_Type: string[];
 export const Names: string[];
 export const Simple_Case_Mapping: string[];
 export const Special_Casing: string[];
