@@ -1,1 +1,0 @@
-module.exports=['\f','\u2028','\u2029']
