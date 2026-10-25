@@ -5,6 +5,7 @@ declare const data: {
 	readonly Script: string[];
 	readonly Case_Folding: string[];
 	readonly Block: string[];
+	readonly Bidi_Mirroring_Glyph: string[];
 	readonly Line_Break: string[];
 	readonly Joining_Type: string[];
 	readonly Names: string[];

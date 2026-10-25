@@ -1,1 +1,3 @@
-export default [1536,1537,1538,1539,1569,1652,1757,8204];
+import ranges from './ranges.mjs';
+
+export default ranges.flatMap((r) => Array.from(r.keys()));

@@ -50,6 +50,10 @@ import bidiClassMap from '@unicode/unicode-4.0.0/Bidi_Class/index.mjs';
 // Get the directionality of a given code point:
 const directionality = bidiClassMap.get(0x41);
 
+// What glyph is the mirror image of `«` (U+00AB)?
+import bidiMirroringGlyph from '@unicode/unicode-4.0.0/Bidi_Mirroring_Glyph/index.mjs';
+const mirrored = bidiMirroringGlyph.get(0xAB);
+
 // …you get the idea.
 ```
 
@@ -247,6 +251,10 @@ import Bidi_MirroredCodePoints from '@unicode/unicode-4.0.0/Binary_Property/Bidi
 import Bidi_MirroredSymbols from '@unicode/unicode-4.0.0/Binary_Property/Bidi_Mirrored/symbols.mjs';
 import Bidi_MirroredRegex from '@unicode/unicode-4.0.0/Binary_Property/Bidi_Mirrored/regex.mjs';
 
+import Composition_ExclusionCodePoints from '@unicode/unicode-4.0.0/Binary_Property/Composition_Exclusion/code-points.mjs';
+import Composition_ExclusionSymbols from '@unicode/unicode-4.0.0/Binary_Property/Composition_Exclusion/symbols.mjs';
+import Composition_ExclusionRegex from '@unicode/unicode-4.0.0/Binary_Property/Composition_Exclusion/regex.mjs';
+
 import DashCodePoints from '@unicode/unicode-4.0.0/Binary_Property/Dash/code-points.mjs';
 import DashSymbols from '@unicode/unicode-4.0.0/Binary_Property/Dash/symbols.mjs';
 import DashRegex from '@unicode/unicode-4.0.0/Binary_Property/Dash/regex.mjs';
@@ -342,30 +350,6 @@ import LowercaseRegex from '@unicode/unicode-4.0.0/Binary_Property/Lowercase/reg
 import MathCodePoints from '@unicode/unicode-4.0.0/Binary_Property/Math/code-points.mjs';
 import MathSymbols from '@unicode/unicode-4.0.0/Binary_Property/Math/symbols.mjs';
 import MathRegex from '@unicode/unicode-4.0.0/Binary_Property/Math/regex.mjs';
-
-import NFC_MAYBECodePoints from '@unicode/unicode-4.0.0/Binary_Property/NFC_MAYBE/code-points.mjs';
-import NFC_MAYBESymbols from '@unicode/unicode-4.0.0/Binary_Property/NFC_MAYBE/symbols.mjs';
-import NFC_MAYBERegex from '@unicode/unicode-4.0.0/Binary_Property/NFC_MAYBE/regex.mjs';
-
-import NFC_NOCodePoints from '@unicode/unicode-4.0.0/Binary_Property/NFC_NO/code-points.mjs';
-import NFC_NOSymbols from '@unicode/unicode-4.0.0/Binary_Property/NFC_NO/symbols.mjs';
-import NFC_NORegex from '@unicode/unicode-4.0.0/Binary_Property/NFC_NO/regex.mjs';
-
-import NFD_NOCodePoints from '@unicode/unicode-4.0.0/Binary_Property/NFD_NO/code-points.mjs';
-import NFD_NOSymbols from '@unicode/unicode-4.0.0/Binary_Property/NFD_NO/symbols.mjs';
-import NFD_NORegex from '@unicode/unicode-4.0.0/Binary_Property/NFD_NO/regex.mjs';
-
-import NFKC_MAYBECodePoints from '@unicode/unicode-4.0.0/Binary_Property/NFKC_MAYBE/code-points.mjs';
-import NFKC_MAYBESymbols from '@unicode/unicode-4.0.0/Binary_Property/NFKC_MAYBE/symbols.mjs';
-import NFKC_MAYBERegex from '@unicode/unicode-4.0.0/Binary_Property/NFKC_MAYBE/regex.mjs';
-
-import NFKC_NOCodePoints from '@unicode/unicode-4.0.0/Binary_Property/NFKC_NO/code-points.mjs';
-import NFKC_NOSymbols from '@unicode/unicode-4.0.0/Binary_Property/NFKC_NO/symbols.mjs';
-import NFKC_NORegex from '@unicode/unicode-4.0.0/Binary_Property/NFKC_NO/regex.mjs';
-
-import NFKD_NOCodePoints from '@unicode/unicode-4.0.0/Binary_Property/NFKD_NO/code-points.mjs';
-import NFKD_NOSymbols from '@unicode/unicode-4.0.0/Binary_Property/NFKD_NO/symbols.mjs';
-import NFKD_NORegex from '@unicode/unicode-4.0.0/Binary_Property/NFKD_NO/regex.mjs';
 
 import Noncharacter_Code_PointCodePoints from '@unicode/unicode-4.0.0/Binary_Property/Noncharacter_Code_Point/code-points.mjs';
 import Noncharacter_Code_PointSymbols from '@unicode/unicode-4.0.0/Binary_Property/Noncharacter_Code_Point/symbols.mjs';
@@ -517,217 +501,217 @@ import White_SpaceRegex from '@unicode/unicode-4.0.0/Bidi_Class/White_Space/rege
 
 // `Script`:
 
-import ARABICCodePoints from '@unicode/unicode-4.0.0/Script/ARABIC/code-points.mjs';
-import ARABICSymbols from '@unicode/unicode-4.0.0/Script/ARABIC/symbols.mjs';
-import ARABICRegex from '@unicode/unicode-4.0.0/Script/ARABIC/regex.mjs';
+import ArabicCodePoints from '@unicode/unicode-4.0.0/Script/Arabic/code-points.mjs';
+import ArabicSymbols from '@unicode/unicode-4.0.0/Script/Arabic/symbols.mjs';
+import ArabicRegex from '@unicode/unicode-4.0.0/Script/Arabic/regex.mjs';
 
-import ARMENIANCodePoints from '@unicode/unicode-4.0.0/Script/ARMENIAN/code-points.mjs';
-import ARMENIANSymbols from '@unicode/unicode-4.0.0/Script/ARMENIAN/symbols.mjs';
-import ARMENIANRegex from '@unicode/unicode-4.0.0/Script/ARMENIAN/regex.mjs';
+import ArmenianCodePoints from '@unicode/unicode-4.0.0/Script/Armenian/code-points.mjs';
+import ArmenianSymbols from '@unicode/unicode-4.0.0/Script/Armenian/symbols.mjs';
+import ArmenianRegex from '@unicode/unicode-4.0.0/Script/Armenian/regex.mjs';
 
-import BENGALICodePoints from '@unicode/unicode-4.0.0/Script/BENGALI/code-points.mjs';
-import BENGALISymbols from '@unicode/unicode-4.0.0/Script/BENGALI/symbols.mjs';
-import BENGALIRegex from '@unicode/unicode-4.0.0/Script/BENGALI/regex.mjs';
+import BengaliCodePoints from '@unicode/unicode-4.0.0/Script/Bengali/code-points.mjs';
+import BengaliSymbols from '@unicode/unicode-4.0.0/Script/Bengali/symbols.mjs';
+import BengaliRegex from '@unicode/unicode-4.0.0/Script/Bengali/regex.mjs';
 
-import BOPOMOFOCodePoints from '@unicode/unicode-4.0.0/Script/BOPOMOFO/code-points.mjs';
-import BOPOMOFOSymbols from '@unicode/unicode-4.0.0/Script/BOPOMOFO/symbols.mjs';
-import BOPOMOFORegex from '@unicode/unicode-4.0.0/Script/BOPOMOFO/regex.mjs';
+import BopomofoCodePoints from '@unicode/unicode-4.0.0/Script/Bopomofo/code-points.mjs';
+import BopomofoSymbols from '@unicode/unicode-4.0.0/Script/Bopomofo/symbols.mjs';
+import BopomofoRegex from '@unicode/unicode-4.0.0/Script/Bopomofo/regex.mjs';
 
-import BRAILLECodePoints from '@unicode/unicode-4.0.0/Script/BRAILLE/code-points.mjs';
-import BRAILLESymbols from '@unicode/unicode-4.0.0/Script/BRAILLE/symbols.mjs';
-import BRAILLERegex from '@unicode/unicode-4.0.0/Script/BRAILLE/regex.mjs';
+import BrailleCodePoints from '@unicode/unicode-4.0.0/Script/Braille/code-points.mjs';
+import BrailleSymbols from '@unicode/unicode-4.0.0/Script/Braille/symbols.mjs';
+import BrailleRegex from '@unicode/unicode-4.0.0/Script/Braille/regex.mjs';
 
-import BUHIDCodePoints from '@unicode/unicode-4.0.0/Script/BUHID/code-points.mjs';
-import BUHIDSymbols from '@unicode/unicode-4.0.0/Script/BUHID/symbols.mjs';
-import BUHIDRegex from '@unicode/unicode-4.0.0/Script/BUHID/regex.mjs';
+import BuhidCodePoints from '@unicode/unicode-4.0.0/Script/Buhid/code-points.mjs';
+import BuhidSymbols from '@unicode/unicode-4.0.0/Script/Buhid/symbols.mjs';
+import BuhidRegex from '@unicode/unicode-4.0.0/Script/Buhid/regex.mjs';
 
-import CANADIAN_ABORIGINALCodePoints from '@unicode/unicode-4.0.0/Script/CANADIAN_ABORIGINAL/code-points.mjs';
-import CANADIAN_ABORIGINALSymbols from '@unicode/unicode-4.0.0/Script/CANADIAN_ABORIGINAL/symbols.mjs';
-import CANADIAN_ABORIGINALRegex from '@unicode/unicode-4.0.0/Script/CANADIAN_ABORIGINAL/regex.mjs';
+import Canadian_AboriginalCodePoints from '@unicode/unicode-4.0.0/Script/Canadian_Aboriginal/code-points.mjs';
+import Canadian_AboriginalSymbols from '@unicode/unicode-4.0.0/Script/Canadian_Aboriginal/symbols.mjs';
+import Canadian_AboriginalRegex from '@unicode/unicode-4.0.0/Script/Canadian_Aboriginal/regex.mjs';
 
-import CHEROKEECodePoints from '@unicode/unicode-4.0.0/Script/CHEROKEE/code-points.mjs';
-import CHEROKEESymbols from '@unicode/unicode-4.0.0/Script/CHEROKEE/symbols.mjs';
-import CHEROKEERegex from '@unicode/unicode-4.0.0/Script/CHEROKEE/regex.mjs';
+import CherokeeCodePoints from '@unicode/unicode-4.0.0/Script/Cherokee/code-points.mjs';
+import CherokeeSymbols from '@unicode/unicode-4.0.0/Script/Cherokee/symbols.mjs';
+import CherokeeRegex from '@unicode/unicode-4.0.0/Script/Cherokee/regex.mjs';
 
-import CYPRIOTCodePoints from '@unicode/unicode-4.0.0/Script/CYPRIOT/code-points.mjs';
-import CYPRIOTSymbols from '@unicode/unicode-4.0.0/Script/CYPRIOT/symbols.mjs';
-import CYPRIOTRegex from '@unicode/unicode-4.0.0/Script/CYPRIOT/regex.mjs';
+import CommonCodePoints from '@unicode/unicode-4.0.0/Script/Common/code-points.mjs';
+import CommonSymbols from '@unicode/unicode-4.0.0/Script/Common/symbols.mjs';
+import CommonRegex from '@unicode/unicode-4.0.0/Script/Common/regex.mjs';
 
-import CYRILLICCodePoints from '@unicode/unicode-4.0.0/Script/CYRILLIC/code-points.mjs';
-import CYRILLICSymbols from '@unicode/unicode-4.0.0/Script/CYRILLIC/symbols.mjs';
-import CYRILLICRegex from '@unicode/unicode-4.0.0/Script/CYRILLIC/regex.mjs';
+import CypriotCodePoints from '@unicode/unicode-4.0.0/Script/Cypriot/code-points.mjs';
+import CypriotSymbols from '@unicode/unicode-4.0.0/Script/Cypriot/symbols.mjs';
+import CypriotRegex from '@unicode/unicode-4.0.0/Script/Cypriot/regex.mjs';
 
-import DESERETCodePoints from '@unicode/unicode-4.0.0/Script/DESERET/code-points.mjs';
-import DESERETSymbols from '@unicode/unicode-4.0.0/Script/DESERET/symbols.mjs';
-import DESERETRegex from '@unicode/unicode-4.0.0/Script/DESERET/regex.mjs';
+import CyrillicCodePoints from '@unicode/unicode-4.0.0/Script/Cyrillic/code-points.mjs';
+import CyrillicSymbols from '@unicode/unicode-4.0.0/Script/Cyrillic/symbols.mjs';
+import CyrillicRegex from '@unicode/unicode-4.0.0/Script/Cyrillic/regex.mjs';
 
-import DEVANAGARICodePoints from '@unicode/unicode-4.0.0/Script/DEVANAGARI/code-points.mjs';
-import DEVANAGARISymbols from '@unicode/unicode-4.0.0/Script/DEVANAGARI/symbols.mjs';
-import DEVANAGARIRegex from '@unicode/unicode-4.0.0/Script/DEVANAGARI/regex.mjs';
+import DeseretCodePoints from '@unicode/unicode-4.0.0/Script/Deseret/code-points.mjs';
+import DeseretSymbols from '@unicode/unicode-4.0.0/Script/Deseret/symbols.mjs';
+import DeseretRegex from '@unicode/unicode-4.0.0/Script/Deseret/regex.mjs';
 
-import ETHIOPICCodePoints from '@unicode/unicode-4.0.0/Script/ETHIOPIC/code-points.mjs';
-import ETHIOPICSymbols from '@unicode/unicode-4.0.0/Script/ETHIOPIC/symbols.mjs';
-import ETHIOPICRegex from '@unicode/unicode-4.0.0/Script/ETHIOPIC/regex.mjs';
+import DevanagariCodePoints from '@unicode/unicode-4.0.0/Script/Devanagari/code-points.mjs';
+import DevanagariSymbols from '@unicode/unicode-4.0.0/Script/Devanagari/symbols.mjs';
+import DevanagariRegex from '@unicode/unicode-4.0.0/Script/Devanagari/regex.mjs';
 
-import GEORGIANCodePoints from '@unicode/unicode-4.0.0/Script/GEORGIAN/code-points.mjs';
-import GEORGIANSymbols from '@unicode/unicode-4.0.0/Script/GEORGIAN/symbols.mjs';
-import GEORGIANRegex from '@unicode/unicode-4.0.0/Script/GEORGIAN/regex.mjs';
+import EthiopicCodePoints from '@unicode/unicode-4.0.0/Script/Ethiopic/code-points.mjs';
+import EthiopicSymbols from '@unicode/unicode-4.0.0/Script/Ethiopic/symbols.mjs';
+import EthiopicRegex from '@unicode/unicode-4.0.0/Script/Ethiopic/regex.mjs';
 
-import GOTHICCodePoints from '@unicode/unicode-4.0.0/Script/GOTHIC/code-points.mjs';
-import GOTHICSymbols from '@unicode/unicode-4.0.0/Script/GOTHIC/symbols.mjs';
-import GOTHICRegex from '@unicode/unicode-4.0.0/Script/GOTHIC/regex.mjs';
+import GeorgianCodePoints from '@unicode/unicode-4.0.0/Script/Georgian/code-points.mjs';
+import GeorgianSymbols from '@unicode/unicode-4.0.0/Script/Georgian/symbols.mjs';
+import GeorgianRegex from '@unicode/unicode-4.0.0/Script/Georgian/regex.mjs';
 
-import GREEKCodePoints from '@unicode/unicode-4.0.0/Script/GREEK/code-points.mjs';
-import GREEKSymbols from '@unicode/unicode-4.0.0/Script/GREEK/symbols.mjs';
-import GREEKRegex from '@unicode/unicode-4.0.0/Script/GREEK/regex.mjs';
+import GothicCodePoints from '@unicode/unicode-4.0.0/Script/Gothic/code-points.mjs';
+import GothicSymbols from '@unicode/unicode-4.0.0/Script/Gothic/symbols.mjs';
+import GothicRegex from '@unicode/unicode-4.0.0/Script/Gothic/regex.mjs';
 
-import GUJARATICodePoints from '@unicode/unicode-4.0.0/Script/GUJARATI/code-points.mjs';
-import GUJARATISymbols from '@unicode/unicode-4.0.0/Script/GUJARATI/symbols.mjs';
-import GUJARATIRegex from '@unicode/unicode-4.0.0/Script/GUJARATI/regex.mjs';
+import GreekCodePoints from '@unicode/unicode-4.0.0/Script/Greek/code-points.mjs';
+import GreekSymbols from '@unicode/unicode-4.0.0/Script/Greek/symbols.mjs';
+import GreekRegex from '@unicode/unicode-4.0.0/Script/Greek/regex.mjs';
 
-import GURMUKHICodePoints from '@unicode/unicode-4.0.0/Script/GURMUKHI/code-points.mjs';
-import GURMUKHISymbols from '@unicode/unicode-4.0.0/Script/GURMUKHI/symbols.mjs';
-import GURMUKHIRegex from '@unicode/unicode-4.0.0/Script/GURMUKHI/regex.mjs';
+import GujaratiCodePoints from '@unicode/unicode-4.0.0/Script/Gujarati/code-points.mjs';
+import GujaratiSymbols from '@unicode/unicode-4.0.0/Script/Gujarati/symbols.mjs';
+import GujaratiRegex from '@unicode/unicode-4.0.0/Script/Gujarati/regex.mjs';
 
-import HANCodePoints from '@unicode/unicode-4.0.0/Script/HAN/code-points.mjs';
-import HANSymbols from '@unicode/unicode-4.0.0/Script/HAN/symbols.mjs';
-import HANRegex from '@unicode/unicode-4.0.0/Script/HAN/regex.mjs';
+import GurmukhiCodePoints from '@unicode/unicode-4.0.0/Script/Gurmukhi/code-points.mjs';
+import GurmukhiSymbols from '@unicode/unicode-4.0.0/Script/Gurmukhi/symbols.mjs';
+import GurmukhiRegex from '@unicode/unicode-4.0.0/Script/Gurmukhi/regex.mjs';
 
-import HANGULCodePoints from '@unicode/unicode-4.0.0/Script/HANGUL/code-points.mjs';
-import HANGULSymbols from '@unicode/unicode-4.0.0/Script/HANGUL/symbols.mjs';
-import HANGULRegex from '@unicode/unicode-4.0.0/Script/HANGUL/regex.mjs';
+import HanCodePoints from '@unicode/unicode-4.0.0/Script/Han/code-points.mjs';
+import HanSymbols from '@unicode/unicode-4.0.0/Script/Han/symbols.mjs';
+import HanRegex from '@unicode/unicode-4.0.0/Script/Han/regex.mjs';
 
-import HANUNOOCodePoints from '@unicode/unicode-4.0.0/Script/HANUNOO/code-points.mjs';
-import HANUNOOSymbols from '@unicode/unicode-4.0.0/Script/HANUNOO/symbols.mjs';
-import HANUNOORegex from '@unicode/unicode-4.0.0/Script/HANUNOO/regex.mjs';
+import HangulCodePoints from '@unicode/unicode-4.0.0/Script/Hangul/code-points.mjs';
+import HangulSymbols from '@unicode/unicode-4.0.0/Script/Hangul/symbols.mjs';
+import HangulRegex from '@unicode/unicode-4.0.0/Script/Hangul/regex.mjs';
 
-import HEBREWCodePoints from '@unicode/unicode-4.0.0/Script/HEBREW/code-points.mjs';
-import HEBREWSymbols from '@unicode/unicode-4.0.0/Script/HEBREW/symbols.mjs';
-import HEBREWRegex from '@unicode/unicode-4.0.0/Script/HEBREW/regex.mjs';
+import HanunooCodePoints from '@unicode/unicode-4.0.0/Script/Hanunoo/code-points.mjs';
+import HanunooSymbols from '@unicode/unicode-4.0.0/Script/Hanunoo/symbols.mjs';
+import HanunooRegex from '@unicode/unicode-4.0.0/Script/Hanunoo/regex.mjs';
 
-import HIRAGANACodePoints from '@unicode/unicode-4.0.0/Script/HIRAGANA/code-points.mjs';
-import HIRAGANASymbols from '@unicode/unicode-4.0.0/Script/HIRAGANA/symbols.mjs';
-import HIRAGANARegex from '@unicode/unicode-4.0.0/Script/HIRAGANA/regex.mjs';
+import HebrewCodePoints from '@unicode/unicode-4.0.0/Script/Hebrew/code-points.mjs';
+import HebrewSymbols from '@unicode/unicode-4.0.0/Script/Hebrew/symbols.mjs';
+import HebrewRegex from '@unicode/unicode-4.0.0/Script/Hebrew/regex.mjs';
 
-import INHERITEDCodePoints from '@unicode/unicode-4.0.0/Script/INHERITED/code-points.mjs';
-import INHERITEDSymbols from '@unicode/unicode-4.0.0/Script/INHERITED/symbols.mjs';
-import INHERITEDRegex from '@unicode/unicode-4.0.0/Script/INHERITED/regex.mjs';
+import HiraganaCodePoints from '@unicode/unicode-4.0.0/Script/Hiragana/code-points.mjs';
+import HiraganaSymbols from '@unicode/unicode-4.0.0/Script/Hiragana/symbols.mjs';
+import HiraganaRegex from '@unicode/unicode-4.0.0/Script/Hiragana/regex.mjs';
 
-import KANNADACodePoints from '@unicode/unicode-4.0.0/Script/KANNADA/code-points.mjs';
-import KANNADASymbols from '@unicode/unicode-4.0.0/Script/KANNADA/symbols.mjs';
-import KANNADARegex from '@unicode/unicode-4.0.0/Script/KANNADA/regex.mjs';
+import InheritedCodePoints from '@unicode/unicode-4.0.0/Script/Inherited/code-points.mjs';
+import InheritedSymbols from '@unicode/unicode-4.0.0/Script/Inherited/symbols.mjs';
+import InheritedRegex from '@unicode/unicode-4.0.0/Script/Inherited/regex.mjs';
 
-import KATAKANACodePoints from '@unicode/unicode-4.0.0/Script/KATAKANA/code-points.mjs';
-import KATAKANASymbols from '@unicode/unicode-4.0.0/Script/KATAKANA/symbols.mjs';
-import KATAKANARegex from '@unicode/unicode-4.0.0/Script/KATAKANA/regex.mjs';
+import KannadaCodePoints from '@unicode/unicode-4.0.0/Script/Kannada/code-points.mjs';
+import KannadaSymbols from '@unicode/unicode-4.0.0/Script/Kannada/symbols.mjs';
+import KannadaRegex from '@unicode/unicode-4.0.0/Script/Kannada/regex.mjs';
 
-import KHMERCodePoints from '@unicode/unicode-4.0.0/Script/KHMER/code-points.mjs';
-import KHMERSymbols from '@unicode/unicode-4.0.0/Script/KHMER/symbols.mjs';
-import KHMERRegex from '@unicode/unicode-4.0.0/Script/KHMER/regex.mjs';
+import KatakanaCodePoints from '@unicode/unicode-4.0.0/Script/Katakana/code-points.mjs';
+import KatakanaSymbols from '@unicode/unicode-4.0.0/Script/Katakana/symbols.mjs';
+import KatakanaRegex from '@unicode/unicode-4.0.0/Script/Katakana/regex.mjs';
 
-import LAOCodePoints from '@unicode/unicode-4.0.0/Script/LAO/code-points.mjs';
-import LAOSymbols from '@unicode/unicode-4.0.0/Script/LAO/symbols.mjs';
-import LAORegex from '@unicode/unicode-4.0.0/Script/LAO/regex.mjs';
+import KhmerCodePoints from '@unicode/unicode-4.0.0/Script/Khmer/code-points.mjs';
+import KhmerSymbols from '@unicode/unicode-4.0.0/Script/Khmer/symbols.mjs';
+import KhmerRegex from '@unicode/unicode-4.0.0/Script/Khmer/regex.mjs';
 
-import LATINCodePoints from '@unicode/unicode-4.0.0/Script/LATIN/code-points.mjs';
-import LATINSymbols from '@unicode/unicode-4.0.0/Script/LATIN/symbols.mjs';
-import LATINRegex from '@unicode/unicode-4.0.0/Script/LATIN/regex.mjs';
+import LaoCodePoints from '@unicode/unicode-4.0.0/Script/Lao/code-points.mjs';
+import LaoSymbols from '@unicode/unicode-4.0.0/Script/Lao/symbols.mjs';
+import LaoRegex from '@unicode/unicode-4.0.0/Script/Lao/regex.mjs';
 
-import LIMBUCodePoints from '@unicode/unicode-4.0.0/Script/LIMBU/code-points.mjs';
-import LIMBUSymbols from '@unicode/unicode-4.0.0/Script/LIMBU/symbols.mjs';
-import LIMBURegex from '@unicode/unicode-4.0.0/Script/LIMBU/regex.mjs';
+import LatinCodePoints from '@unicode/unicode-4.0.0/Script/Latin/code-points.mjs';
+import LatinSymbols from '@unicode/unicode-4.0.0/Script/Latin/symbols.mjs';
+import LatinRegex from '@unicode/unicode-4.0.0/Script/Latin/regex.mjs';
 
-import LINEAR_BCodePoints from '@unicode/unicode-4.0.0/Script/LINEAR_B/code-points.mjs';
-import LINEAR_BSymbols from '@unicode/unicode-4.0.0/Script/LINEAR_B/symbols.mjs';
-import LINEAR_BRegex from '@unicode/unicode-4.0.0/Script/LINEAR_B/regex.mjs';
+import LimbuCodePoints from '@unicode/unicode-4.0.0/Script/Limbu/code-points.mjs';
+import LimbuSymbols from '@unicode/unicode-4.0.0/Script/Limbu/symbols.mjs';
+import LimbuRegex from '@unicode/unicode-4.0.0/Script/Limbu/regex.mjs';
 
-import MALAYALAMCodePoints from '@unicode/unicode-4.0.0/Script/MALAYALAM/code-points.mjs';
-import MALAYALAMSymbols from '@unicode/unicode-4.0.0/Script/MALAYALAM/symbols.mjs';
-import MALAYALAMRegex from '@unicode/unicode-4.0.0/Script/MALAYALAM/regex.mjs';
+import Linear_BCodePoints from '@unicode/unicode-4.0.0/Script/Linear_B/code-points.mjs';
+import Linear_BSymbols from '@unicode/unicode-4.0.0/Script/Linear_B/symbols.mjs';
+import Linear_BRegex from '@unicode/unicode-4.0.0/Script/Linear_B/regex.mjs';
 
-import MONGOLIANCodePoints from '@unicode/unicode-4.0.0/Script/MONGOLIAN/code-points.mjs';
-import MONGOLIANSymbols from '@unicode/unicode-4.0.0/Script/MONGOLIAN/symbols.mjs';
-import MONGOLIANRegex from '@unicode/unicode-4.0.0/Script/MONGOLIAN/regex.mjs';
+import MalayalamCodePoints from '@unicode/unicode-4.0.0/Script/Malayalam/code-points.mjs';
+import MalayalamSymbols from '@unicode/unicode-4.0.0/Script/Malayalam/symbols.mjs';
+import MalayalamRegex from '@unicode/unicode-4.0.0/Script/Malayalam/regex.mjs';
 
-import MYANMARCodePoints from '@unicode/unicode-4.0.0/Script/MYANMAR/code-points.mjs';
-import MYANMARSymbols from '@unicode/unicode-4.0.0/Script/MYANMAR/symbols.mjs';
-import MYANMARRegex from '@unicode/unicode-4.0.0/Script/MYANMAR/regex.mjs';
+import MongolianCodePoints from '@unicode/unicode-4.0.0/Script/Mongolian/code-points.mjs';
+import MongolianSymbols from '@unicode/unicode-4.0.0/Script/Mongolian/symbols.mjs';
+import MongolianRegex from '@unicode/unicode-4.0.0/Script/Mongolian/regex.mjs';
 
-import OGHAMCodePoints from '@unicode/unicode-4.0.0/Script/OGHAM/code-points.mjs';
-import OGHAMSymbols from '@unicode/unicode-4.0.0/Script/OGHAM/symbols.mjs';
-import OGHAMRegex from '@unicode/unicode-4.0.0/Script/OGHAM/regex.mjs';
+import MyanmarCodePoints from '@unicode/unicode-4.0.0/Script/Myanmar/code-points.mjs';
+import MyanmarSymbols from '@unicode/unicode-4.0.0/Script/Myanmar/symbols.mjs';
+import MyanmarRegex from '@unicode/unicode-4.0.0/Script/Myanmar/regex.mjs';
 
-import OLD_ITALICCodePoints from '@unicode/unicode-4.0.0/Script/OLD_ITALIC/code-points.mjs';
-import OLD_ITALICSymbols from '@unicode/unicode-4.0.0/Script/OLD_ITALIC/symbols.mjs';
-import OLD_ITALICRegex from '@unicode/unicode-4.0.0/Script/OLD_ITALIC/regex.mjs';
+import OghamCodePoints from '@unicode/unicode-4.0.0/Script/Ogham/code-points.mjs';
+import OghamSymbols from '@unicode/unicode-4.0.0/Script/Ogham/symbols.mjs';
+import OghamRegex from '@unicode/unicode-4.0.0/Script/Ogham/regex.mjs';
 
-import ORIYACodePoints from '@unicode/unicode-4.0.0/Script/ORIYA/code-points.mjs';
-import ORIYASymbols from '@unicode/unicode-4.0.0/Script/ORIYA/symbols.mjs';
-import ORIYARegex from '@unicode/unicode-4.0.0/Script/ORIYA/regex.mjs';
+import Old_ItalicCodePoints from '@unicode/unicode-4.0.0/Script/Old_Italic/code-points.mjs';
+import Old_ItalicSymbols from '@unicode/unicode-4.0.0/Script/Old_Italic/symbols.mjs';
+import Old_ItalicRegex from '@unicode/unicode-4.0.0/Script/Old_Italic/regex.mjs';
 
-import OSMANYACodePoints from '@unicode/unicode-4.0.0/Script/OSMANYA/code-points.mjs';
-import OSMANYASymbols from '@unicode/unicode-4.0.0/Script/OSMANYA/symbols.mjs';
-import OSMANYARegex from '@unicode/unicode-4.0.0/Script/OSMANYA/regex.mjs';
+import OriyaCodePoints from '@unicode/unicode-4.0.0/Script/Oriya/code-points.mjs';
+import OriyaSymbols from '@unicode/unicode-4.0.0/Script/Oriya/symbols.mjs';
+import OriyaRegex from '@unicode/unicode-4.0.0/Script/Oriya/regex.mjs';
 
-import RUNICCodePoints from '@unicode/unicode-4.0.0/Script/RUNIC/code-points.mjs';
-import RUNICSymbols from '@unicode/unicode-4.0.0/Script/RUNIC/symbols.mjs';
-import RUNICRegex from '@unicode/unicode-4.0.0/Script/RUNIC/regex.mjs';
+import OsmanyaCodePoints from '@unicode/unicode-4.0.0/Script/Osmanya/code-points.mjs';
+import OsmanyaSymbols from '@unicode/unicode-4.0.0/Script/Osmanya/symbols.mjs';
+import OsmanyaRegex from '@unicode/unicode-4.0.0/Script/Osmanya/regex.mjs';
 
-import SHAVIANCodePoints from '@unicode/unicode-4.0.0/Script/SHAVIAN/code-points.mjs';
-import SHAVIANSymbols from '@unicode/unicode-4.0.0/Script/SHAVIAN/symbols.mjs';
-import SHAVIANRegex from '@unicode/unicode-4.0.0/Script/SHAVIAN/regex.mjs';
+import RunicCodePoints from '@unicode/unicode-4.0.0/Script/Runic/code-points.mjs';
+import RunicSymbols from '@unicode/unicode-4.0.0/Script/Runic/symbols.mjs';
+import RunicRegex from '@unicode/unicode-4.0.0/Script/Runic/regex.mjs';
 
-import SINHALACodePoints from '@unicode/unicode-4.0.0/Script/SINHALA/code-points.mjs';
-import SINHALASymbols from '@unicode/unicode-4.0.0/Script/SINHALA/symbols.mjs';
-import SINHALARegex from '@unicode/unicode-4.0.0/Script/SINHALA/regex.mjs';
+import ShavianCodePoints from '@unicode/unicode-4.0.0/Script/Shavian/code-points.mjs';
+import ShavianSymbols from '@unicode/unicode-4.0.0/Script/Shavian/symbols.mjs';
+import ShavianRegex from '@unicode/unicode-4.0.0/Script/Shavian/regex.mjs';
 
-import SYRIACCodePoints from '@unicode/unicode-4.0.0/Script/SYRIAC/code-points.mjs';
-import SYRIACSymbols from '@unicode/unicode-4.0.0/Script/SYRIAC/symbols.mjs';
-import SYRIACRegex from '@unicode/unicode-4.0.0/Script/SYRIAC/regex.mjs';
+import SinhalaCodePoints from '@unicode/unicode-4.0.0/Script/Sinhala/code-points.mjs';
+import SinhalaSymbols from '@unicode/unicode-4.0.0/Script/Sinhala/symbols.mjs';
+import SinhalaRegex from '@unicode/unicode-4.0.0/Script/Sinhala/regex.mjs';
 
-import TAGALOGCodePoints from '@unicode/unicode-4.0.0/Script/TAGALOG/code-points.mjs';
-import TAGALOGSymbols from '@unicode/unicode-4.0.0/Script/TAGALOG/symbols.mjs';
-import TAGALOGRegex from '@unicode/unicode-4.0.0/Script/TAGALOG/regex.mjs';
+import SyriacCodePoints from '@unicode/unicode-4.0.0/Script/Syriac/code-points.mjs';
+import SyriacSymbols from '@unicode/unicode-4.0.0/Script/Syriac/symbols.mjs';
+import SyriacRegex from '@unicode/unicode-4.0.0/Script/Syriac/regex.mjs';
 
-import TAGBANWACodePoints from '@unicode/unicode-4.0.0/Script/TAGBANWA/code-points.mjs';
-import TAGBANWASymbols from '@unicode/unicode-4.0.0/Script/TAGBANWA/symbols.mjs';
-import TAGBANWARegex from '@unicode/unicode-4.0.0/Script/TAGBANWA/regex.mjs';
+import TagalogCodePoints from '@unicode/unicode-4.0.0/Script/Tagalog/code-points.mjs';
+import TagalogSymbols from '@unicode/unicode-4.0.0/Script/Tagalog/symbols.mjs';
+import TagalogRegex from '@unicode/unicode-4.0.0/Script/Tagalog/regex.mjs';
 
-import TAI_LECodePoints from '@unicode/unicode-4.0.0/Script/TAI_LE/code-points.mjs';
-import TAI_LESymbols from '@unicode/unicode-4.0.0/Script/TAI_LE/symbols.mjs';
-import TAI_LERegex from '@unicode/unicode-4.0.0/Script/TAI_LE/regex.mjs';
+import TagbanwaCodePoints from '@unicode/unicode-4.0.0/Script/Tagbanwa/code-points.mjs';
+import TagbanwaSymbols from '@unicode/unicode-4.0.0/Script/Tagbanwa/symbols.mjs';
+import TagbanwaRegex from '@unicode/unicode-4.0.0/Script/Tagbanwa/regex.mjs';
 
-import TAMILCodePoints from '@unicode/unicode-4.0.0/Script/TAMIL/code-points.mjs';
-import TAMILSymbols from '@unicode/unicode-4.0.0/Script/TAMIL/symbols.mjs';
-import TAMILRegex from '@unicode/unicode-4.0.0/Script/TAMIL/regex.mjs';
+import Tai_LeCodePoints from '@unicode/unicode-4.0.0/Script/Tai_Le/code-points.mjs';
+import Tai_LeSymbols from '@unicode/unicode-4.0.0/Script/Tai_Le/symbols.mjs';
+import Tai_LeRegex from '@unicode/unicode-4.0.0/Script/Tai_Le/regex.mjs';
 
-import TELUGUCodePoints from '@unicode/unicode-4.0.0/Script/TELUGU/code-points.mjs';
-import TELUGUSymbols from '@unicode/unicode-4.0.0/Script/TELUGU/symbols.mjs';
-import TELUGURegex from '@unicode/unicode-4.0.0/Script/TELUGU/regex.mjs';
+import TamilCodePoints from '@unicode/unicode-4.0.0/Script/Tamil/code-points.mjs';
+import TamilSymbols from '@unicode/unicode-4.0.0/Script/Tamil/symbols.mjs';
+import TamilRegex from '@unicode/unicode-4.0.0/Script/Tamil/regex.mjs';
 
-import THAANACodePoints from '@unicode/unicode-4.0.0/Script/THAANA/code-points.mjs';
-import THAANASymbols from '@unicode/unicode-4.0.0/Script/THAANA/symbols.mjs';
-import THAANARegex from '@unicode/unicode-4.0.0/Script/THAANA/regex.mjs';
+import TeluguCodePoints from '@unicode/unicode-4.0.0/Script/Telugu/code-points.mjs';
+import TeluguSymbols from '@unicode/unicode-4.0.0/Script/Telugu/symbols.mjs';
+import TeluguRegex from '@unicode/unicode-4.0.0/Script/Telugu/regex.mjs';
 
-import THAICodePoints from '@unicode/unicode-4.0.0/Script/THAI/code-points.mjs';
-import THAISymbols from '@unicode/unicode-4.0.0/Script/THAI/symbols.mjs';
-import THAIRegex from '@unicode/unicode-4.0.0/Script/THAI/regex.mjs';
+import ThaanaCodePoints from '@unicode/unicode-4.0.0/Script/Thaana/code-points.mjs';
+import ThaanaSymbols from '@unicode/unicode-4.0.0/Script/Thaana/symbols.mjs';
+import ThaanaRegex from '@unicode/unicode-4.0.0/Script/Thaana/regex.mjs';
 
-import TIBETANCodePoints from '@unicode/unicode-4.0.0/Script/TIBETAN/code-points.mjs';
-import TIBETANSymbols from '@unicode/unicode-4.0.0/Script/TIBETAN/symbols.mjs';
-import TIBETANRegex from '@unicode/unicode-4.0.0/Script/TIBETAN/regex.mjs';
+import ThaiCodePoints from '@unicode/unicode-4.0.0/Script/Thai/code-points.mjs';
+import ThaiSymbols from '@unicode/unicode-4.0.0/Script/Thai/symbols.mjs';
+import ThaiRegex from '@unicode/unicode-4.0.0/Script/Thai/regex.mjs';
 
-import UGARITICCodePoints from '@unicode/unicode-4.0.0/Script/UGARITIC/code-points.mjs';
-import UGARITICSymbols from '@unicode/unicode-4.0.0/Script/UGARITIC/symbols.mjs';
-import UGARITICRegex from '@unicode/unicode-4.0.0/Script/UGARITIC/regex.mjs';
+import TibetanCodePoints from '@unicode/unicode-4.0.0/Script/Tibetan/code-points.mjs';
+import TibetanSymbols from '@unicode/unicode-4.0.0/Script/Tibetan/symbols.mjs';
+import TibetanRegex from '@unicode/unicode-4.0.0/Script/Tibetan/regex.mjs';
 
-import UnknownCodePoints from '@unicode/unicode-4.0.0/Script/Unknown/code-points.mjs';
-import UnknownSymbols from '@unicode/unicode-4.0.0/Script/Unknown/symbols.mjs';
-import UnknownRegex from '@unicode/unicode-4.0.0/Script/Unknown/regex.mjs';
+import UgariticCodePoints from '@unicode/unicode-4.0.0/Script/Ugaritic/code-points.mjs';
+import UgariticSymbols from '@unicode/unicode-4.0.0/Script/Ugaritic/symbols.mjs';
+import UgariticRegex from '@unicode/unicode-4.0.0/Script/Ugaritic/regex.mjs';
 
-import YICodePoints from '@unicode/unicode-4.0.0/Script/YI/code-points.mjs';
-import YISymbols from '@unicode/unicode-4.0.0/Script/YI/symbols.mjs';
-import YIRegex from '@unicode/unicode-4.0.0/Script/YI/regex.mjs';
+import YiCodePoints from '@unicode/unicode-4.0.0/Script/Yi/code-points.mjs';
+import YiSymbols from '@unicode/unicode-4.0.0/Script/Yi/symbols.mjs';
+import YiRegex from '@unicode/unicode-4.0.0/Script/Yi/regex.mjs';
 
 // `Case_Folding`:
 
@@ -1093,6 +1077,10 @@ import MyanmarCodePoints from '@unicode/unicode-4.0.0/Block/Myanmar/code-points.
 import MyanmarSymbols from '@unicode/unicode-4.0.0/Block/Myanmar/symbols.mjs';
 import MyanmarRegex from '@unicode/unicode-4.0.0/Block/Myanmar/regex.mjs';
 
+import No_BlockCodePoints from '@unicode/unicode-4.0.0/Block/No_Block/code-points.mjs';
+import No_BlockSymbols from '@unicode/unicode-4.0.0/Block/No_Block/symbols.mjs';
+import No_BlockRegex from '@unicode/unicode-4.0.0/Block/No_Block/regex.mjs';
+
 import Number_FormsCodePoints from '@unicode/unicode-4.0.0/Block/Number_Forms/code-points.mjs';
 import Number_FormsSymbols from '@unicode/unicode-4.0.0/Block/Number_Forms/symbols.mjs';
 import Number_FormsRegex from '@unicode/unicode-4.0.0/Block/Number_Forms/regex.mjs';
@@ -1245,6 +1233,10 @@ import Yijing_Hexagram_SymbolsCodePoints from '@unicode/unicode-4.0.0/Block/Yiji
 import Yijing_Hexagram_SymbolsSymbols from '@unicode/unicode-4.0.0/Block/Yijing_Hexagram_Symbols/symbols.mjs';
 import Yijing_Hexagram_SymbolsRegex from '@unicode/unicode-4.0.0/Block/Yijing_Hexagram_Symbols/regex.mjs';
 
+// `Bidi_Mirroring_Glyph`:
+
+import Bidi_Mirroring_Glyph from '@unicode/unicode-4.0.0/Bidi_Mirroring_Glyph/index.mjs'; // Lookup map.
+
 // `Line_Break`:
 
 import AlphabeticCodePoints from '@unicode/unicode-4.0.0/Line_Break/Alphabetic/code-points.mjs';
@@ -1388,6 +1380,10 @@ import Non_JoiningRegex from '@unicode/unicode-4.0.0/Joining_Type/Non_Joining/re
 import Right_JoiningCodePoints from '@unicode/unicode-4.0.0/Joining_Type/Right_Joining/code-points.mjs';
 import Right_JoiningSymbols from '@unicode/unicode-4.0.0/Joining_Type/Right_Joining/symbols.mjs';
 import Right_JoiningRegex from '@unicode/unicode-4.0.0/Joining_Type/Right_Joining/regex.mjs';
+
+import TransparentCodePoints from '@unicode/unicode-4.0.0/Joining_Type/Transparent/code-points.mjs';
+import TransparentSymbols from '@unicode/unicode-4.0.0/Joining_Type/Transparent/symbols.mjs';
+import TransparentRegex from '@unicode/unicode-4.0.0/Joining_Type/Transparent/regex.mjs';
 
 // `Simple_Case_Mapping`:
 
