@@ -1,12 +1,15 @@
-export const General_Category: string[];
-export const Binary_Property: string[];
-export const Bidi_Class: string[];
-export const Script: string[];
-export const Case_Folding: string[];
-export const Block: string[];
-export const Line_Break: string[];
-export const Joining_Type: string[];
-export const Names: string[];
-export const Simple_Case_Mapping: string[];
-export const Special_Casing: string[];
-export const Decomposition_Mapping: string[];
+declare const data: {
+	readonly General_Category: string[];
+	readonly Binary_Property: string[];
+	readonly Bidi_Class: string[];
+	readonly Script: string[];
+	readonly Case_Folding: string[];
+	readonly Block: string[];
+	readonly Line_Break: string[];
+	readonly Joining_Type: string[];
+	readonly Names: string[];
+	readonly Simple_Case_Mapping: string[];
+	readonly Special_Casing: string[];
+	readonly Decomposition_Mapping: string[];
+};
+export default data;
